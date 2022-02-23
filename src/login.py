@@ -1,5 +1,4 @@
-from cgi import print_environ_usage
-from distutils.log import error
+
 import time
 import datetime
 import sys
@@ -84,7 +83,8 @@ class splash:
                             time.sleep(1)
                             print("\033[1;36;40m[+] Login Sucsessful [+]\n[+] Welcome To Lewd [+]\033")
                             time.sleep(2)
-                            import main
+                            sys.exit()
+
                         
                 
                         
@@ -99,11 +99,11 @@ class splash:
                         time.sleep(1)
                         print("\033[1;36;40m[+] Restarting [+]\033")
                         time.sleep(1)
-                        import Login
+                        sys.exit()
                         
                     
-                    break
-                print("\033[1;36;40mIncorrect username or password.\033")
+                        
+                    print("\033[1;36;40mIncorrect username or password.\033")
 
         if welcome == "n":
                 
@@ -148,7 +148,7 @@ class splash:
                 time.sleep(1)
                 print("\033[1;36;40m[+] Restarting [+]\033")
                 time.sleep(1)
-                import exit_file
+                sys.exit()
                     
         if dataa == key+"@ClamLq":
                 clear_Screen()
@@ -204,4 +204,4 @@ class splash:
                     print("\033[1;36;40m[+] Please Accept Agereement, {Acc Creation Terminated} [+]\033")
                     os.remove(username+".txt")
                     time.sleep(2)
-                    import Login
+                    sys.exit()
